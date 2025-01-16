@@ -14,21 +14,29 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     int pop;
-    float area;
+    float area, dp, pib, pibper;
     int pt;
+
     printf("Digite a populacao: ");
     scanf("%d", &pop);
     printf("Sua populacao: %d\n", pop);
 
     printf("Digite a area: ");
     scanf("%f", &area);
-    printf("Sua populacao: %f\n", area);
+    printf("Sua area: %.2f\n", area);
+    
+    printf("Digite O PIB(soma dos bens): ");
+    scanf("%f", &pib);
+    printf("PIB: %.2f\n", pib);
     
     printf("Digite quantos pontos turisticos existe: ");
-    scanf("%e", &pt);
-    printf("Seu ponto turistico: %e\n", pt);
+    scanf("%d", &pt);
+    printf("Seu ponto turistico: %d\n", pt);
+    
+    dp = pop / area;
+    pibper = pib / pop;
 
-    printf("populacao:%d\n, area:%f\n, pontos turistico:%e");
+    printf("populacao:%d \n area:%.2f \n PIB: %.2f \n pontos turistico:%d \n Densidade Populacional: %.2f \n PIB per Capita %.2f", pop , area, pib, pt, dp,pibper);
 
 
     // Exibição dos Dados das Cartas:
